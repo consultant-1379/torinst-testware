@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Each team will need to update the following section to reflect the
+        correct parent for their test cases -->
+        <parent>
+	<groupId>com.ericsson.nms</groupId>
+            <artifactId>integration</artifactId>
+            <version>15.2.0.30</version>
+        </parent>
+ <!-- Each team will need to update the following section with the correct
+        information -->
+	<groupId>com.ericsson.itpf.deployment.taf</groupId>
+    	<artifactId>torinst-testware</artifactId>
+    	<version>1.3.4-SNAPSHOT</version>
+    	<packaging>pom</packaging>
+
+    	<properties>
+        	<taf_version>2.1.11</taf_version>
+    	</properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-maven-plugin</artifactId>
+                    <version>${taf_version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+                <plugin>
+                	<groupId>org.eclipse.m2e</groupId>
+                	<artifactId>lifecycle-mapping</artifactId>
+                	<version>1.0.0</version>
+                	<configuration>
+                		<lifecycleMappingMetadata>
+                			<pluginExecutions>
+                				<pluginExecution>
+                					<pluginExecutionFilter>
+                						<groupId>
+                							org.codehaus.mojo
+                						</groupId>
+                						<artifactId>
+                							build-helper-maven-plugin
+                						</artifactId>
+                						<versionRange>
+                							[1.7,)
+                						</versionRange>
+                						<goals>
+                							<goal>regex-property</goal>
+                						</goals>
+                					</pluginExecutionFilter>
+                					<action>
+                						<ignore />
+                					</action>
+                				</pluginExecution>
+                			</pluginExecutions>
+                		</lifecycleMappingMetadata>
+                	</configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.cifwk.taf</groupId>
+                <artifactId>taf-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+  <scm>
+    <tag>torinst-testware-1.1.0</tag>
+  </scm>
+  <modules>
+    <module>ERICTAFtorinst_CXP9030466</module>
+    <module>test-pom-torinst</module>
+  </modules>
+</project>

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TorInstFunctionalTest">
+    <test name="TorInstFunctionalTest" preserve-order="true">
+        <classes>
+            <class name="com.ericsson.itpf.deployment.test.cases.TorInstFunctionalTest"/>
+        </classes>
+    </test>
+</suite>       

@@ -1,0 +1,2 @@
+host,commandRef,expectedOut
+ms1,findUser_storadm,storadm:x:490:483:User created by Puppet/Landscape:/opt/ericsson/storage/user/nas/storadm:/bin/bash
